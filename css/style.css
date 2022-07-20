@@ -25,6 +25,7 @@ body{
 /* banner area */
 header{
     padding: 50px 0;
+
 }
 .banner{
     background-color: #161616;
@@ -43,11 +44,11 @@ header{
     line-height: 70px;
     font-weight: 700;
 }
-.banner-img{
-    width: 55%;
+.banner-text p{
+    text-overflow: ellipsis;
 }
 .banner-img img{
-    width: 70%;
+    width: 79%;
     margin-left: 65px;
 }
 
@@ -61,7 +62,7 @@ header{
     flex-direction: column;
     align-items: center;;
     width: 400px;
-    height: 315px;
+    /* height: 315px; */
     border-radius: 10px;
 }
 .match-blog a{
@@ -69,7 +70,7 @@ header{
     text-align: center;
     color: #161616;
     background-color: whitesmoke;
-    width: 80%;
+    width: 185px;
     padding: 15px 0;
     margin: 25px 0;
     border-radius: 10px;
@@ -85,7 +86,6 @@ header{
 .matches{
     width: 100%;
     display: grid;
-
     grid-template-columns: repeat(3 , 1fr);
 }
 .match{
@@ -122,6 +122,13 @@ header{
     display: flex;
     align-items: center;
 }
+.match-btn{
+    display: none;
+    text-align: center;    
+    margin: auto;
+    margin-bottom: 30px;
+    width: 20%;
+}
 /* footer  area */
 footer{
     background-color: #161616;
@@ -135,6 +142,7 @@ footer h3{
 footer nav ul{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 footer nav ul li{
     list-style: none;
@@ -161,4 +169,75 @@ footer nav ul li a{
 }
 .social-area ul li a:hover{
     color: #0672E1;
+}
+
+
+/******** responsive ********/
+
+/* tablet view  */
+@media screen and (max-width: 880px) {
+    /* banner area  */
+    .banner-text h2 {
+        font-size: 34px;
+        line-height: 55px;
+    }
+    .banner-text p{
+        text-overflow: ellipsis;
+    }
+    /* match and blog area  */
+    .matches-area {
+        display: block;
+    }
+    .match-blog{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        /* height: 100px; */
+        background-color: white;
+    }
+    .matches{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+    /* footer  */
+    .match-btn{
+        display: block;
+    }
+}
+/* mobile view  */
+@media screen and (max-width: 425px) {
+    .banner{
+        flex-direction: column;
+    }
+    .banner-text{
+        padding: 0;
+        width: 70%;
+        text-align: center;
+    }
+    .banner-text h2{
+        font-size: 24px;
+    }
+    .banner-text p{
+        font-size: 14px;
+    }
+    .btn{
+        margin-bottom: 20px;
+    }
+    /* match area  */
+    .match-blog{
+        flex-direction: column;
+    }
+    .match-blog a{
+        margin:15px 0;
+    }
+    .matches {
+        grid-template-columns: repeat(1 , 1fr);
+    }
+    .match-btn{
+        display: none;
+    }
+    /* footer  */
+    footer nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
 }
