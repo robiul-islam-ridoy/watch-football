@@ -19,7 +19,9 @@ body{
     border-radius: 8px;
     display: inline-block;
 }
-
+.btn span{
+    margin-left: 5px;
+}
 /* banner area */
 header{
     padding: 50px 0;
@@ -106,6 +108,11 @@ header{
     border: 1px solid #161616;
     border-radius: 5px;
 }
+.match a:hover{
+    background-color: #fc5e42;
+    color: whitesmoke;
+    border: 1px solid whitesmoke
+}
 .match .time{
     display: flex;
     justify-content: space-evenly;
@@ -114,4 +121,44 @@ header{
 .match .time .timer , .match .time .comment{
     display: flex;
     align-items: center;
+}
+/* footer  area */
+footer{
+    background-color: #161616;
+    padding: 30px 0;
+}
+footer h3{
+    color: whitesmoke;
+    font-size: 30px;
+    text-align: center;
+}
+footer nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+footer nav ul li{
+    list-style: none;
+    margin-top: 20px;
+}
+footer nav ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+.social-area ul{
+    display: flex;
+    justify-content: center;
+}
+.social-area ul li{
+    list-style: none;
+}
+.social-area ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 25px;
+    display: inline-block;
+    margin-top: 40px;
+    padding: 0 15px;
+}
+.social-area ul li a:hover{
+    color: #0672E1;
 }
