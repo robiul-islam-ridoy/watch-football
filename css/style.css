@@ -18,6 +18,12 @@ body{
     padding: 15px 20px;
     border-radius: 8px;
     display: inline-block;
+    transition: transform 0.7s ease-out;
+}
+.btn:hover{
+    background-color: whitesmoke;
+    color: #fc5e42;
+    transform: scale(1.2);
 }
 .btn span{
     margin-left: 5px;
@@ -182,7 +188,13 @@ footer nav ul li a{
         line-height: 55px;
     }
     .banner-text p{
+        height: 50px;
+        white-space: nowrap;
+        overflow: hidden;
         text-overflow: ellipsis;
+    }
+    .banner-img img {
+        width: 75%;
     }
     /* match and blog area  */
     .matches-area {
@@ -205,6 +217,7 @@ footer nav ul li a{
 }
 /* mobile view  */
 @media screen and (max-width: 425px) {
+    /* banner area  */
     .banner{
         flex-direction: column;
     }

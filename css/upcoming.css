@@ -1,0 +1,9 @@
+.match .flags{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.match .match-text{
+    margin-left: 26px;
+}
